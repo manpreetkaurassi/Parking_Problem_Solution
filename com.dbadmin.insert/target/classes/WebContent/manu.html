@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>MANU</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script>
+$(document).ready(
+		function(){
+			//GET REQUEST
+			alert(window.location);
+			$("#accessPortal").click(function(event){
+				alert("accessPortal");
+				
+				ajaxPost();
+				
+			})	;
+			
+			//DO GET
+			function ajaxPost(){
+				alert("Insde ajax");
+				$.ajax({		
+					url: "http://localhost:8080/",
+					success: function(result){
+						alert("successss")
+						//alert(result);
+					}
+					
+					
+				})
+			}
+})
+</script>
+</head>
+<body>
+	<br></br>
+	<br></br>
+	<div class = "container"> 
+	<h2> SIGN UP FORM</h2>
+	<button id = "accessPortal" type = "button" class = btn > CLICK
+	</button>
+ </div>
+</body>
+</html>
